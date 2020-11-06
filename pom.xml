@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net-fitness</groupId>
+  <artifactId>net.fitness</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>net-fitness-tracker</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.version>3.6.3</maven.compiler.version>
+</properties>
+
+
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.jdbi</groupId>
+      <artifactId>jdbi3-bom</artifactId>
+      <type>pom</type>
+      <version>3.16.0</version>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+
+<dependencies>
+  <dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.8.6</version>
+</dependency>
+]
+  <!-- https://mvnrepository.com/artifact/org.jdbi/jdbi3-core -->
+  <dependency>
+    <groupId>org.jdbi</groupId>
+    <artifactId>jdbi3-core</artifactId>
+    <version>3.17.0</version>
+  </dependency>
+
+
+  <!-- https://mvnrepository.com/artifact/org.jdbi/jdbi3-sqlobject -->
+  <dependency>
+    <groupId>org.jdbi</groupId>
+    <artifactId>jdbi3-sqlobject</artifactId>
+  </dependency>
+
+  <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.4.0</version>
+    <scope>test</scope>
+  </dependency>
+
+  <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.4.0</version>
+    <scope>test</scope>
+  </dependency>
+
+  <dependency>
+    <groupId>com.sparkjava</groupId>
+    <artifactId>spark-core</artifactId>
+    <version>2.9.1</version>
+  </dependency>
+
+  <dependency>
+    <groupId>com.sparkjava</groupId>
+    <artifactId>spark-template-handlebars</artifactId>
+    <version>2.7.1</version>
+  </dependency>
+
+  <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>1.7.21</version>
+  </dependency>
+
+  <dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.2.14</version>
+  </dependency>
+
+</dependencies>
+
+<build>
+  <plugins>
+
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-dependency-plugin</artifactId>
+      <configuration>
+        <outputDirectory>
+          ${project.build.directory}
+        </outputDirectory>
+      </configuration>
+    </plugin>
+
+  </plugins>
+</build>
+</project>
