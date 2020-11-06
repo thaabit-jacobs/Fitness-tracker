@@ -4,5 +4,5 @@ create table exercises(
     exercise_type varchar(225) not null,
     weight decimal(5, 2) not null,
     reps int not null,
-    DayOfWeek varchar(225) not null
+    date_created date not null
 );

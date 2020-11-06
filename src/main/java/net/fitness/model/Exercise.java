@@ -5,27 +5,27 @@ import java.time.LocalDate;
 public class Exercise {
 	
 	private int id;
-	private String name;
+	private String exerciseName;
 	private String exerciseType;
 	private double weight;
 	private int reps;
-	private LocalDate date;
+	private LocalDate dateCreated;
 	
-	public Exercise(int id, String name, String exerciseType, double weight, int reps, LocalDate date) {
+	public Exercise(int id, String exerciseName, String exerciseType, double weight, int reps, LocalDate dateCreated) {
 		this.id = id;
-		this.name = name;
+		this.exerciseName = exerciseName;
 		this.exerciseType = exerciseType;
 		this.weight = weight;
 		this.reps = reps;
-		this.date = date;
+		this.dateCreated = dateCreated;
 	}
 	
 	public int getId() {
 		return id;
 	}
 	
-	public String getName() {
-		return name;
+	public String getExerciseName() {
+		return exerciseName;
 	}
 	
 	public String getExerciseType() {
@@ -40,16 +40,16 @@ public class Exercise {
 		return reps;
 	}
 
-	public LocalDate getDate() {
-		return date;
+	public LocalDate getDateCreated() {
+		return dateCreated;
 	}
 	
 	public void setId(int id) {
 		this.id = id;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setExerciseName(String exerciseName) {
+		this.exerciseName = exerciseName;
 	}
 	
 	public void setExerciseType(String exerciseType) {
@@ -64,7 +64,7 @@ public class Exercise {
 		this.reps = reps;
 	}
 
-	public void setDayOfWeek(LocalDate date) {
-		this.date = date;
+	public void setDateCreated(LocalDate date) {
+		this.dateCreated = dateCreated;
 	}
 }
